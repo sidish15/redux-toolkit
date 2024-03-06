@@ -8,5 +8,5 @@ const userSlice=createSlice({
                 removeUser(state,action){},
                 deleteUsers(state,action){},
         },
-}),
+});
 export {userSlice};
