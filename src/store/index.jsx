@@ -1,9 +1,9 @@
-import  {configureStore} from '@reduxjs/toolkit';
-import  userSlice  from './slices/UserSlices';
+import { configureStore } from '@reduxjs/toolkit';
+import userSlice from './slices/UserSlices';
 
-const store=configureStore({
-        reducer:{
-                users:userSlice,
+const store = configureStore({
+        reducer: {
+                users: userSlice,
         },
         /* 
         If this(reducer) is a single function,it will  be directly used as the root reducer for the store
