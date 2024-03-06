@@ -1,8 +1,10 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector ,useDispatch} from 'react-redux'
 import styled from 'styled-components'
-
+import {FaBeer} from "react-icons/fa"
+import { removeUser } from '../store/slices/UserSlices'
 const DisplayUsers = () => {
+        const dispatch=useDispatch();
 
         const data=useSelector((state)=>{
                 return state.users;
@@ -10,12 +12,20 @@ const DisplayUsers = () => {
         })
         // store k slices ko access kar skte h
 
-        console.log(data);
+        // console.log(data);
+
+        const deleteUser=(id)=>{
+        dispatch(removeUser(id))
+        // id will act as a payload for removeUser in slice
+        }
   return <Wrapper>
 {
         data.map((user,id)=>{
            return <li key={id}>
-             {user}
+             {user} 
+             <button className=' btn-delete' onClick={()=>deleteUser(id)}>
+             <FaBeer className="delete-icon"/>
+             </button>
            </li>
         })
 }
