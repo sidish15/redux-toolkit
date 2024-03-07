@@ -1,5 +1,5 @@
 import React from "react";
-import { DeleteAllUser } from "./DeleteAllUser";
+import  DeleteAllUser  from "./DeleteAllUser.jsx";
 import styled from "styled-components";
 import { fakeUserData } from "../api";
 
@@ -28,7 +28,7 @@ const UserDetails = () => {
           <DisplayUsers/>
         </ul>
         <hr />
-        <DeleteAllUser />
+        <DeleteAllUser/>
       </div>
     </Wrapper>
   );
